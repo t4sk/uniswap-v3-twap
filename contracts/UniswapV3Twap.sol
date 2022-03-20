@@ -6,13 +6,19 @@ import "@uniswap/v3-periphery/contracts/libraries/OracleLibrary.sol";
 
 /*
 TODO:
+geometric mean
+time weighted geometric mean price
 tick
 - price = 1.001 ^ tick
 - how to calculate price from tick
 tick cumulative
+price of token 0 and token 1
 code
 - consult
 - getQuoteAtTick
+- getSqrtRatioAtTick = sqrt(1.0001^tick) * 2^96
+2^96 * 2^96 = 2^192 = 1 << 192
+- mulDiv(a, b, denominator) = Calculates floor(a×b÷denominator)
 increaseObservationCardinalityNext()
 */
 
