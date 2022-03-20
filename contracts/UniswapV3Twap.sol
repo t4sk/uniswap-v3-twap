@@ -10,8 +10,9 @@ tick
 - price = 1.001 ^ tick
 - how to calculate price from tick
 tick cumulative
-consult
-getQuoteAtTick
+code
+- consult
+- getQuoteAtTick
 increaseObservationCardinalityNext()
 */
 
