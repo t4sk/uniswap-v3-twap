@@ -13,11 +13,13 @@ tick
 - how to calculate price from tick
 tick cumulative
 price of token 0 and token 1
+
 code
 - consult
 - getQuoteAtTick
 - getSqrtRatioAtTick = sqrt(1.0001^tick) * 2^96
 2^96 * 2^96 = 2^192 = 1 << 192
+ratio = token1/token0
 - mulDiv(a, b, denominator) = Calculates floor(a×b÷denominator)
 increaseObservationCardinalityNext()
 */
