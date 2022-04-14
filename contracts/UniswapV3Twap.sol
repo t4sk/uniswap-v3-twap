@@ -70,6 +70,17 @@ contract UniswapV3Twap {
         // int56 / uint32 = int24
         int24 tick = int24(tickCumulativesDelta / secondsAgo);
         // Always round to negative infinity
+        /*
+        int doesn't round down when it is negative
+
+        int56 a = -3
+        -3 / 10 = -3.3333... so round down to -4
+        but we get
+        a / 10 = -3
+
+        so if tickCumulativeDelta < 0 and division has remainder, then round
+        down
+        */
         if (
             tickCumulativesDelta < 0 && (tickCumulativesDelta % secondsAgo != 0)
         ) {
