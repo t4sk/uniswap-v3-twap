@@ -4,21 +4,6 @@ pragma solidity 0.7.6;
 import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Factory.sol";
 import "@uniswap/v3-periphery/contracts/libraries/OracleLibrary.sol";
 
-/*
-TODO:
-geometric mean
-time weighted geometric mean price
-
-code
-- consult
-- getQuoteAtTick
-- getSqrtRatioAtTick = sqrt(1.0001^tick) * 2^96
-2^96 * 2^96 = 2^192 = 1 << 192
-ratio = token1/token0
-- mulDiv(a, b, denominator) = Calculates floor(a×b÷denominator)
-increaseObservationCardinalityNext()
-*/
-
 contract UniswapV3Twap {
     address public immutable token0;
     address public immutable token1;
